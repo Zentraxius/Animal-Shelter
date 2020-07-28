@@ -7,7 +7,7 @@ namespace AnimalShelter.Models
     private static List<Animal> _instances = new List<Animal> { };
     public string Name { get; set;}
     public int Id { get; }
-    public List<Type> type { get; set;}
+    public List<Type> Type { get; set;}
 
     public Animal(string animalName)
     {
@@ -30,7 +30,7 @@ namespace AnimalShelter.Models
     }
     public void AddType(Type type)
     {
-      Type.add(type);
+      Type.Add(type);
     }
   }
 }

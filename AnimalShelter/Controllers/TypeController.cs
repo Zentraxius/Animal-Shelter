@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace AnimalShelter.Controllers
 {
-  public class TypeController : Controllers
+  public class TypeController : Controller
   {
     private readonly AnimalShelterContext _db;
 
-    public TypesController(AnimalShelterContext  db)
+    public TypesController(AnimalShelterContext db)
     {
       _db = db;
     }
