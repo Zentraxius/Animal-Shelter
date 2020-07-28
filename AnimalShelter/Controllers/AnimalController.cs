@@ -5,18 +5,18 @@ using System.Linq;
 
 namespace AnimalShelter.Controllers
 {
-  public class TypeController : Controller
+  public class AnimalController : Controller
   {
     private readonly AnimalShelterContext _db;
 
-    public TypesController(AnimalShelterContext db)
+    public AnimalController(AnimalShelterContext db)
     {
       _db = db;
     }
 
     public ActionResult Index()
     {
-      List<Type> model = _db.Types.ToList();
+      List<Animal> model = _db.Animal.ToList();
       return View(model);
     }
 
@@ -26,9 +26,9 @@ namespace AnimalShelter.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Type type)
+    public ActionResult Create(Animal animal)
     {
-      _db.Types.Add(type);
+      _db.Animal.Add(animal);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
